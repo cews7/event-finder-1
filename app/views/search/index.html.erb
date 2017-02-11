@@ -1,0 +1,11 @@
+<h2> <%= @events.count %> events in March</h2>
+<% @events.each do |event| %>
+<ul>
+  <li><%= event.title %></li>
+  <li><%= event.description[0..139] %></li>
+  <li><%= event.venue_address %></li>
+  <li><%= event.venue_name %></li>
+  <li><%= event.date_time %></li>
+  <li><%= link_to "link", event.url %></li>
+</ul>
+<% end %>
